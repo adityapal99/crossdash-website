@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a96bff;
+      }
+    </style>
+  </defs>
+  <rect id="violet_line" data-name="violet line" class="cls-1" width="160" height="8" rx="4"/>
+</svg>
