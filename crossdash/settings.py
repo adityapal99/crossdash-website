@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 config = RawConfigParser()
 
-config.read('application/settings.ini')
+config.read('crossdash/settings.ini')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -30,6 +30,7 @@ SECRET_KEY = 'gd)ao*uc!!demr@#3m$d6*xwk1o5z^9!+wh)yjwb^3-rrjfa&i'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
 MONGOUSER = config.get('section', 'MONGOUSER')
 MONGOPASS = config.get('section', 'MONGOPASS')
 MONGODB = config.get('section', 'MONGODB')
