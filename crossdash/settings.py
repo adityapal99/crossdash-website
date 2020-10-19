@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+from configparser import RawConfigParser
+import urllib
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+config = RawConfigParser()
+
+config.read('application/settings.ini')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -26,7 +30,11 @@ SECRET_KEY = 'gd)ao*uc!!demr@#3m$d6*xwk1o5z^9!+wh)yjwb^3-rrjfa&i'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+MONGOUSER = config.get('section', 'MONGOUSER')
+MONGOPASS = config.get('section', 'MONGOPASS')
+MONGODB = config.get('section', 'MONGODB')
+MONGOIP = config.get('section', 'MONGOIP')
+MONGOPORT = config.get('section', 'MONGOPORT')
 
 # Application definition
 
@@ -78,9 +86,13 @@ WSGI_APPLICATION = 'crossdash.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'qzzo_website',
-        'HOST': '127.0.0.1',
-        'PORT': 27017,
+        "CLIENT": {
+            "name": MONGODB,
+            "host": f"mongodb://{(urllib.parse.quote(MONGOUSER))}:{urllib.parse.quote(MONGOPASS)}@{MONGOIP}:27017/?authSource=admin&readPreference=primary&ssl=false",
+            "username": MONGOUSER,
+            "password": MONGOPASS,
+            "authMechanism": "DEFAULT",
+        },
     }
 }
 

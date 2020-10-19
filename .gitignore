@@ -13,9 +13,7 @@ db.sqlite3-journal
 media
 # <django-project-name>/staticfiles/
 .idea
-qzzo/util.json
-qzzo/settings.ini
-utils/mongo_connection
+crossdash/settings.ini
 ### Django.Python Stack ###
 # Byte-compiled / optimized / DLL files
 *.py[cod]
