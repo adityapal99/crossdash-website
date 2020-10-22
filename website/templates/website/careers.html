@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <link rel="manifest" href="/static/assets/icons/manifest.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="robots" content = "index, follow">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/careers.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel ="icon" href="/static/assets/icons/favicon.ico">
+    <title>Careers | Crossdash Solutions</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><div class="logo">
+            <img src="/static/assets/png/logolarge.png" alt="" />
+            <h1>CROSSDASH <br />SOLUTIONS</h1>
+          </div></a>
+        <ul class="navlinks">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="careers.html">Careers</a></li>
+        </ul>
+        <a href="#contact"><div class="cta">
+            <button>GET IN TOUCH</button>
+        </div></a>
+    </nav>
+    <div class="careerform-container">
+        <div class="background">
+            <div id="background-text">
+                <h1>COME WORK WITH US</h1>
+                <img src="/static/assets/svg/white line.svg" alt="">
+                <h4>Email your resume at <br> hr@crossdash.in</h4>
+            </div>
+            <div class="career-form-container">
+                <form class="career-form" id="career-form" action="/careers" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div id="name">
+                        <input type="text" placeholder="First Name" name="first_name" required="" autocomplete="none" />
+                        <input type="text" placeholder="Last Name" name="last_name" required="" autocomplete="none" />
+                        <input type="email" placeholder="Email" name="email" required="" autocomplete="none" />
+                        <input type="" placeholder="Phone Number" name="phone" required="" autocomplete="none" />
+                    </div>
+                    <div id="reason">
+                        <textarea name="project_details" placeholder="Tell us about your project"id="" cols="20" rows="10"></textarea>
+                    </div>
+                    <div id="job-type">
+                        <select name="job_type" placeholder="" id="" required="">
+                            <option value="none" selected="selected">Select Job Type</option>
+                            <option value="Internship">Internship</option>
+                            <option value="Full time">Full time</option>
+                        </select>
+                    </div>
+                    <div id="file-upload">
+                        <p>Upload your CV / Portfolio</p>
+                        <input type="file" name="cv">
+                    </div>
+                    <div id="submit">
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <div id="contactus">
+                <h3>Contact Us</h3>
+                <div class="contact-details">
+                    <img src="/static/assets/svg/mail.svg" alt="">
+                    <p>crossdash@gmail.com</p>
+                </div>
+                <div class="contact-details">
+                    <img src="/static/assets/svg/location.svg" alt="">
+                    <p>Shop No. S-5, Malhan Plaza, Pocket-7,<br> Plot No. 5, Sector-12, Dwarka, <br>New Delhi - 110078 <br>India</p>
+                </div>
+                 <div class="contact-details">
+                    <a href = "tel:+91 9310117667" ><img src="/static/assets/svg/phone.svg" alt=""></a>
+                    <a href = "tel:+91 9310117667" ><p>+91 9310117667</p></a>
+                </div>
+            </div>
+            <div id="quicklinks">
+                <h3>Quick Links</h3>
+                <ul>
+                    <a href="#home"><li>Home</li></a>
+                    <a href="#services"><li>Services</li></a>
+                    <li>Projects</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div id="footerservices">
+                <h3>Services</h3>
+                <ul>
+                    <li>Design</li>
+                    <li>Development</li>
+                    <li>Software Solutions</li>
+                </ul>
+            </div>
+        </div>
+        <p id="copyright">© 2020 Crossdash Solutions Private Limited. All rights reserved.</p>
+    </footer>
+</body>
+</html>

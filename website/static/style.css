@@ -23,6 +23,8 @@ nav {
 }
 .logo {
   display: flex;
+  position: relative;
+  top: 50%;
 }
 .logo img {
   position: relative;
@@ -38,7 +40,7 @@ nav {
   color: white;
   font-size: 1.1rem;
   padding-left: 2rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   align-items: center;
   letter-spacing: 0.3rem;
 }
@@ -51,6 +53,9 @@ nav {
   width: 45%;
   justify-content: space-around;
   list-style: none;
+}
+nav a {
+  text-decoration: none;
 }
 .navlinks a {
   text-align: center;
@@ -132,7 +137,7 @@ nav {
 }
 .headerimg img {
   opacity: 0;
-  animation: transitionHorizontal 800ms ease forwards 1500ms;
+  animation: transitionleft 800ms ease forwards 1500ms;
 }
 #polygon {
   position: absolute;
@@ -141,7 +146,7 @@ nav {
   z-index: 1;
   top: 14rem;
   opacity: 0;
-  animation: transitionHorizontal 800ms ease forwards 1800ms;
+  animation: transitionleft 800ms ease forwards 1800ms;
 }
 
 .services {
@@ -465,7 +470,7 @@ footer {
   font-weight: 500;
 }
 #quicklinks ul li,
-#services ul li {
+#footerservices ul li {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   list-style: none;
@@ -478,6 +483,9 @@ footer {
   font-weight: 500;
   text-align: center;
   margin-top: 10rem;
+}
+footer a {
+  text-decoration: none;
 }
 /**hover animations**/
 
@@ -524,23 +532,23 @@ footer {
   color: #02216b;
 }
 #submit input:hover {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: #3a3a3a;
 }
 @keyframes transitionIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-25px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-@keyframes transitionHorizontal {
+@keyframes transitionleft {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(40px);
   }
   to {
     opacity: 1;
@@ -553,7 +561,7 @@ footer {
   color: #02216b;
   font-weight: 600;
 }
-#services ul li:hover {
+#footerservices ul li:hover {
   cursor: pointer;
   text-decoration: underline;
   color: #02216b;

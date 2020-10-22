@@ -1,0 +1,148 @@
+.background {
+  background: url(/static/assets/png/careersform.png);
+  min-height: 100vh;
+  background-size: cover;
+}
+.background h1 {
+  color: white;
+  font-size: 4.4em;
+  font-weight: 600;
+  width: 30%;
+  position: absolute;
+  right: 20rem;
+  bottom: 34rem;
+  letter-spacing: 0.16rem;
+  opacity: 0;
+  animation: transitionleft 700ms ease forwards 1000ms;
+}
+.background img {
+  position: absolute;
+  left: 74.5rem;
+  top: 39rem;
+  width: 8rem;
+  opacity: 0;
+  animation: transitionleft 700ms ease forwards 1000ms;
+}
+.background h4 {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08rem;
+  width: 30%;
+  position: relative;
+  left: 55%;
+  top: 36rem;
+  opacity: 0;
+  animation: transitionleft 700ms ease forwards 1000ms;
+}
+#career-form {
+  text-align: center;
+}
+#career-form input {
+  display: grid;
+  width: 75%;
+  margin: 1.8rem auto;
+  grid-template-columns: 1fr;
+  background-color: #f2f2f2;
+}
+.career-form-container {
+  position: relative;
+  bottom: 3rem;
+  padding: 2rem;
+  margin-left: 6rem;
+  background-color: white;
+  width: 40%;
+  border-radius: 0.6rem;
+  filter: drop-shadow(0.3rem 0.6rem 0.8rem rgba(37, 37, 37, 0.507));
+  opacity: 0;
+  animation: transitionIn 1000ms ease forwards 150ms;
+}
+#reason textarea {
+  width: 75%;
+  margin: 0;
+  padding: 1.6rem 3rem;
+  outline: none;
+  border: none;
+  border-radius: 0.6rem;
+  background-color: #f2f2f2;
+  height: 10rem;
+}
+#job-type select {
+  background-color: #f2f2f2;
+  width: 75%;
+  padding: 1.6rem 3rem;
+  outline: none;
+  border: none;
+  border-radius: 0.6rem;
+  margin-top: 1.4rem;
+}
+#file-upload {
+  width: 75%;
+  background-color: #529de8;
+  padding: 0.5rem 0 0 0;
+  outline: none;
+  margin: 3rem auto;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+#file-upload p {
+  color: white;
+  padding-top: 1rem;
+  font-size: 1.4rem;
+  position: relative;
+  text-align: left;
+  margin-left: 2rem;
+}
+#file-upload input {
+  color: #529de8;
+  border: 0.1rem solid #529de8;
+  background-color: white;
+  width: 100%;
+  padding: 1.4rem 3rem;
+  transition-duration: 500ms;
+  outline: none;
+}
+.custom-text {
+  right: 6.6rem;
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+  background-color: #529de8;
+  padding: 1.6rem 3rem;
+  width: 100%;
+  position: relative;
+  top: 5.5rem;
+  cursor: pointer;
+  color: white;
+}
+::-webkit-file-upload-button {
+  display: none;
+}
+#file-upload input:hover {
+  background-color: #28639e;
+  color: white;
+  border-color: #28639e;
+  filter: drop-shadow(0rem 0.2rem 0.2rem rgba(78, 78, 78, 0.507));
+}
+#submit input {
+  background-color: black;
+  margin-top: 4rem;
+  width: 50%;
+}
+#submit input:hover {
+  background-color: #28639e;
+  color: white;
+}
+footer {
+  top: 16rem;
+}
+
+@keyframes transitionright {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

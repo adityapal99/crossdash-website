@@ -39,6 +39,9 @@ class StorageSheets(object):
         res = self.sheet.insert_row(values_list, index=2)
         return res
 
+    def get_sheet_url(self):
+        print(self.sheet.url)
+        return self.sheet.url
 
 
 
