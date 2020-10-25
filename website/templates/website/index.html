@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="robots" content = "index, follow">
+    <link rel="manifest" href="/static/assets/icons/manifest.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="/static/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel ="icon" href="/static/assets/icons/favicon.ico">
+    <title>Crossdash Solutions</title>
+  </head>
+  <body>
+    <section class="home" id="home">
+      <nav>
+        <a href="/"><div class="logo">
+          <img src="/static/assets/png/logolarge.png" alt="" />
+          <h1>CROSSDASH <br />SOLUTIONS</h1>
+        </div></a>
+        <ul class="navlinks">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="/careers">Careers</a></li>
+        </ul>
+        <a href="#contact"
+          ><div class="cta">
+            <button>GET IN TOUCH</button>
+          </div></a
+        >
+      </nav>
+      <div class="header">
+        <div class="headertext">
+          <h2>We provide a one stop solution to all your digital problems.</h2>
+        </div>
+        <div id="line1">
+          <img src="/static/assets/svg/violet line.svg" alt="" />
+        </div>
+        <div class="headerbutton">
+          <a href="#contact"><button>GET IN TOUCH</button></a>
+        </div>
+        <div class="headerimg">
+          <img src="/static/assets/png/header image.png" alt="" />
+        </div>
+        <div id="polygon">
+          <img src="/static/assets/svg/blue ploygon.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <h2>Our Services</h2>
+      <div id="line2">
+        <img src="/static/assets/svg/green line.svg" alt="" />
+      </div>
+
+      <div id="design">
+        <div
+          class="designtext"
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-offset="300"
+        >
+          <h3>DESIGN SERVICES</h3>
+          <p>
+            Build your brand and aesthetic using our well crafted design
+            services.
+          </p>
+          <div class="seperator"></div>
+          <ul>
+            <li>UI/UX DESIGN</li>
+            <li>GRAPHICS DESIGN</li>
+            <li>CONTENT DEVELOPMENT</li>
+          </ul>
+        </div>
+        <div class="design-img">
+          <img
+            src="/static/assets/png/design.png"
+            alt=""
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-offset="300"
+          />
+        </div>
+        <div id="design-svg">
+          <img src="/static/assets/svg/blue plus.svg" alt="" />
+        </div>
+      </div>
+
+      <div id="development">
+        <div
+          class="development-text"
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          data-aos-offset="300"
+        >
+          <h3>DEVELOPMENT SERVICES</h3>
+          <p>
+            Build interactive and dynamic websites and apps for your business.
+          </p>
+          <div class="seperator"></div>
+          <ul>
+            <li>WEB DEVELOPMENT</li>
+            <li>ANDROID DEVELOPMENT</li>
+            <li>iOS DEVELOPMENT</li>
+            <li>DJANGO DEVELOPMENT</li>
+          </ul>
+        </div>
+        <div class="development-img">
+          <img
+            src="/static/assets/png/development.png"
+            alt=""
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            data-aos-offset="300"
+          />
+        </div>
+        <div id="development-svg">
+          <img src="/static/assets/svg/red dots.svg" alt="" />
+        </div>
+      </div>
+
+      <div id="software">
+        <div
+          class="software-text"
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-offset="300"
+        >
+          <h3>DEVELOPMENT SERVICES</h3>
+          <p>
+            Wide range of high quality software solutions to make your life
+            easier.
+          </p>
+          <div class="seperator"></div>
+          <ul>
+            <li>DESKTOP SOFTWARE GUI</li>
+            <li>MACHINE & DEEP LEARNING</li>
+            <li>PYTHON SCRIPTING</li>
+            <li>SERVER HANDLING & MAINTAINANCE</li>
+            <li>EMBEDDED SYSTEMS DEVELOPMENT</li>
+          </ul>
+        </div>
+        <div class="software-img">
+          <img
+            src="/static/assets/png/software.png"
+            alt=""
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-offset="300"
+          />
+        </div>
+        <div id="software-svg">
+          <img src="/static/assets/svg/green plus.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="form-container">
+        <h3>LET'S COLLABORATE!</h3>
+        <h4>Connect with us.</h4>
+        <form action="/" method="post">
+                {% csrf_token %}
+                <div id="name">
+                    <input type="text" placeholder="First Name" name="first_name" required="" autocomplete="none" />
+                    <input type="text" placeholder="Last Name" name="last_name" required="" autocomplete="none" />
+                </div>
+                <div id="email">
+                    <input type="email" placeholder="Email" name="email" required="" autocomplete="none" />
+                    <input type="" placeholder="Phone Number" name="phone" required="" autocomplete="none" />
+                </div>
+                <div id="details">
+                    <select name="service" placeholder="Select the service that you want" id="" required="">
+                        <option value="none" selected="selected">Select service</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Content Development">Content Development</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Android Development">Android Development</option>
+                        <option value="iOS Development">iOS Development</option>
+                        <option value="Django Development">Django Development</option>
+                        <option value="Desktop Software GUI">Desktop Software GUI</option>
+                        <option value="Machine & Deep Learning">Machine & Deep Learning</option>
+                        <option value="Python Scripting">Python Scripting</option>
+                        <option value="Server Handling & Maintainance">Server Handling & Maintainance</option>
+                        <option value="Embedded Systems Development">Embedded Systems Development</option>
+                    </select>
+                    <textarea name="details" placeholder="Tell us about your project"id="" cols="20" rows="10"></textarea>
+                </div>
+                <div id="submit">
+                    <input type="submit">
+                </div>
+            </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <div id="contactus">
+          <h3>Contact Us</h3>
+          <div class="contact-details">
+            <img src="/static/assets/svg/mail.svg" alt="" />
+            <p>crossdash@gmail.com</p>
+          </div>
+          <div class="contact-details">
+            <img src="/static/assets/svg/location.svg" alt="" />
+            <p>
+              Shop No. S-5, Malhan Plaza, Pocket-7,<br />
+              Plot No. 5, Sector-12, Dwarka, <br />New Delhi - 110078
+              <br />India
+            </p>
+          </div>
+          <div class="contact-details">
+            <a href="tel:+91 9310117667"
+              ><img src="/static/assets/svg/phone.svg" alt=""
+            /></a>
+            <a href="tel:+91 9310117667"><p>+91 9310117667</p></a>
+          </div>
+        </div>
+        <div id="quicklinks">
+          <h3>Quick Links</h3>
+          <ul>
+            <a href="#home"><li>Home</li></a>
+            <a href="#services"><li>Services</li></a>
+            <li>Projects</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div id="footerservices">
+          <h3>Services</h3>
+          <ul>
+            <li>Design</li>
+            <li>Development</li>
+            <li>Software Solutions</li>
+          </ul>
+        </div>
+      </div>
+      <p id="copyright">
+        © 2020 Crossdash Solutions Private Limited. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]', { speed: 800 });
+    </script>
+  </body>
+</html>

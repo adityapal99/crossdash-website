@@ -18,7 +18,7 @@ from datetime import datetime
 import math
 class Home(View):
     def get(self, request):
-        return render(request, 'website/Home.html')
+        return render(request, 'website/index.html')
 
     def post(self, request):
         first_name = request.POST.get('first_name')
@@ -29,21 +29,23 @@ class Home(View):
         details = request.POST.get('details')
 
         details = UserProjectDetails.objects.get_or_create(first_name=first_name, last_name=last_name, email=email, phone=phone, service=service, details=details)
-        serialized_data = UserProjectDetailsSerializer(details).data
+
+        if not details[1]:
+            return render(request, 'website/index.html')
 
         data_list = [
-            serialized_data.get('id'),
-            serialized_data.get('first_name'),
-            serialized_data.get('last_name'),
-            serialized_data.get('email'),
-            serialized_data.get('phone'),
-            serialized_data.get('service'),
-            serialized_data.get('details'),
+            details[0].id,
+            details[0].first_name,
+            details[0].last_name,
+            details[0].email,
+            details[0].phone,
+            details[0].service,
+            details[0].details,
         ]
         sheet = StorageSheets(0)
         sheet.add_values(data_list)
 
-        return render(request, 'website/Home.html')
+        return render(request, 'website/index.html')
 
 class CareersView(View):
     def get(self, request):
@@ -64,7 +66,7 @@ class CareersView(View):
 
         id = math.floor(datetime.now().timestamp() * 1000)
 
-        career = Careers.objects.create(
+        career = Careers.objects.get_or_create(
             id = id,
             first_name=first_name,
             last_name = last_name,
@@ -74,6 +76,10 @@ class CareersView(View):
             job_type = job_type,
         )
 
+        if not career[1]:
+            return render(request, "website/careers.html", {'statuc': False, 'message': 'Entry Already Exists'})
+
+        career = career[0]
         storage = FileSystemStorage(settings.MEDIA_ROOT)
         file = storage.save("careers/{}/cv.{}".format(str(career.id), cv.name.split('.')[-1]), cv)
         cv_url = storage.url(file)

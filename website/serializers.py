@@ -15,14 +15,3 @@ class UserProjectDetailsSerializer(ModelSerializer):
             'service',
             'details',
         )
-
-    def save(self):
-        account = contactus(
-            email=self.validated_data['email'],
-            name=self.validated_data['name'],
-            phonenumber=self.validated_data['phonenumber'],
-            comment=self.validated_data['comment'],
-
-        )
-        account.save()
-        return account
