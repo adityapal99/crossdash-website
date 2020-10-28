@@ -29,7 +29,7 @@ SECRET_KEY = 'gd)ao*uc!!demr@#3m$d6*xwk1o5z^9!+wh)yjwb^3-rrjfa&i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 MONGOUSER = config.get('section', 'MONGOUSER')
 MONGOPASS = config.get('section', 'MONGOPASS')
