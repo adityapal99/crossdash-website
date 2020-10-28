@@ -1,0 +1,72 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 3rem;
+}
+.project {
+  width: 93%;
+  height: 40rem;
+  text-align: center;
+  background-color: #ff9900;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  transition-duration: 500ms;
+}
+.project:hover {
+  filter: drop-shadow(0rem 0.2rem 0.4rem rgba(78, 78, 78, 0.507));
+}
+.project-logo {
+  text-align: center;
+  position: relative;
+  top: 10rem;
+  width: 70%;
+  margin: 0 auto;
+}
+.project-logo img {
+  width: 50%;
+  position: relative;
+}
+.project-button button {
+  position: relative;
+  background-color: transparent;
+  color: white;
+  top: 14rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.16rem;
+  padding: 1.8rem 3rem;
+  border: 0.16rem solid white;
+  outline: none;
+}
+.project-button button::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+.project-button:hover ::before,
+.project-button:focus ::before {
+  transform: scaleX(1);
+}
+.project-button button {
+  z-index: 1;
+  transition: color 300ms ease-in-out;
+}
+.project-button button:hover,
+.project-button button:focus {
+  color: #ff9900;
+  cursor: pointer;
+}
+footer {
+  top: 20rem;
+}

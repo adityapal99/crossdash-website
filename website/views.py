@@ -102,3 +102,12 @@ class CareersView(View):
 
         return render(request, "website/careers.html", {'statuc': True, 'message': 'ThankYou for contacting'})
 
+
+class Projects(View):
+    def get(self, request):
+        return render(request, "website/projects.html")
+
+
+class ProjectDetails(View):
+    def get(self, request, id):
+        return render(request, "website/qzzo-casestudy.html")
