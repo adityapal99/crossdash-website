@@ -15,18 +15,22 @@
 </head>
 <body>
     <nav>
-        <a href="/"><div class="logo">
-            <img src="/static/assets/png/logolarge.png" alt="" />
-            <h1>CROSSDASH <br />SOLUTIONS</h1>
-          </div></a>
-        <ul class="navlinks">
-            <li><a href="/#services">Services</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/careers">Careers</a></li>
-        </ul>
-        <a href="/#contact"><div class="cta">
-            <button>GET IN TOUCH</button>
-        </div></a>
+      <a href="/"><div class="logo">
+        <img src="/static/assets/png/logolarge.png" alt="" />
+        <h1>CROSSDASH <br />SOLUTIONS</h1>
+      </div></a>
+      <ul class="navlinks">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/careers">Careers</a></li>
+      </ul>
+      <div class="cta">
+        <a href="/#contact"
+        ><button>GET IN TOUCH</button></a>
+      </div>
+      <div class="menu">
+        <img src="/static/assets/svg/menu.svg" alt="">
+      </div>
     </nav>
 
     <div class="projects-grid">
@@ -78,9 +82,9 @@
           <div id="footerservices">
             <h3>Services</h3>
             <ul>
-              <li>Design</li>
-              <li>Development</li>
-              <li>Software Solutions</li>
+                <a href="/#design"><li>Design</li></a>
+                <a href="/#development"><li>Development</li></a>
+                <a href="/#software"><li>Software Solutions</li></a>
             </ul>
           </div>
         </div>
@@ -94,6 +98,6 @@
       AOS.init();
     </script>
 
-
+    <script src="/static/nav.js"></script>
 </body>
 </html>

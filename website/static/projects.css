@@ -70,3 +70,13 @@
 footer {
   top: 20rem;
 }
+
+/** media queries **/
+@media screen and (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project {
+    height: 35rem;
+  }
+}

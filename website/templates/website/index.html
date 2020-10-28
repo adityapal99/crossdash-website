@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name ="robots" content = "index, follow">
-    <link rel="manifest" href="/static/assets/icons/manifest.webmanifest">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/static/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel ="icon" href="/static/assets/icons/favicon.ico">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/static/assets/png/logo.png" />
     <title>Crossdash Solutions</title>
   </head>
   <body>
-    <section class="home" id="home">
+    <section class="home" id="home">
       <nav>
         <a href="/"><div class="logo">
           <img src="/static/assets/png/logolarge.png" alt="" />
@@ -24,11 +26,13 @@
           <li><a href="/projects">Projects</a></li>
           <li><a href="/careers">Careers</a></li>
         </ul>
-        <a href="#contact"
-          ><div class="cta">
-            <button>GET IN TOUCH</button>
-          </div></a
-        >
+        <div class="cta">
+          <a href="#contact"
+          ><button>GET IN TOUCH</button></a>
+        </div>
+        <div class="menu">
+          <img src="/static/assets/svg/menu.svg" alt="">
+        </div>
       </nav>
       <div class="header">
         <div class="headertext">
@@ -102,12 +106,9 @@
           <div class="seperator"></div>
           <ul>
             <li>WEB DEVELOPMENT</li>
-            <li>SERVER HANDLING & MAINTAINANCE</li>
-            <li>DESKTOP SOFTWARE GUI</li>
             <li>ANDROID DEVELOPMENT</li>
             <li>iOS DEVELOPMENT</li>
-            <li>REST FRAMEWORK DEVELOPMENT</li> 
-            <li>SCRIPTING</li>
+            <li>DJANGO DEVELOPMENT</li>
           </ul>
         </div>
         <div class="development-img">
@@ -131,14 +132,17 @@
           data-aos-duration="1200"
           data-aos-offset="300"
         >
-          <h3>AUTOMATED SOLUTIONS</h3>
+          <h3>SOFTWARE SOLUTIONS</h3>
           <p>
             Wide range of high quality software solutions to make your life
             easier.
           </p>
           <div class="seperator"></div>
           <ul>
+            <li>DESKTOP SOFTWARE GUI</li>
             <li>MACHINE & DEEP LEARNING</li>
+            <li>PYTHON SCRIPTING</li>
+            <li>SERVER HANDLING & MAINTAINANCE</li>
             <li>EMBEDDED SYSTEMS DEVELOPMENT</li>
           </ul>
         </div>
@@ -162,37 +166,66 @@
         <h3>LET'S COLLABORATE!</h3>
         <h4>Connect with us.</h4>
         <form action="/" method="post">
-                {% csrf_token %}
-                <div id="name">
-                    <input type="text" placeholder="First Name" name="first_name" required="" autocomplete="none" />
-                    <input type="text" placeholder="Last Name" name="last_name" required="" autocomplete="none" />
-                </div>
-                <div id="email">
-                    <input type="email" placeholder="Email" name="email" required="" autocomplete="none" />
-                    <input type="" placeholder="Phone Number" name="phone" required="" autocomplete="none" />
-                </div>
-                <div id="details">
-                    <select name="service" placeholder="Select the service that you want" id="" required="">
-                        <option value="none" selected="selected">Select service</option>
-                        <option value="UI/UX Design">UI/UX Design</option>
-                        <option value="Graphic Design">Graphic Design</option>
-                        <option value="Content Development">Content Development</option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Android Development">Android Development</option>
-                        <option value="iOS Development">iOS Development</option>
-                        <option value="Django Development">Django Development</option>
-                        <option value="Desktop Software GUI">Desktop Software GUI</option>
-                        <option value="Machine & Deep Learning">Machine & Deep Learning</option>
-                        <option value="Python Scripting">Python Scripting</option>
-                        <option value="Server Handling & Maintainance">Server Handling & Maintainance</option>
-                        <option value="Embedded Systems Development">Embedded Systems Development</option>
-                    </select>
-                    <textarea name="details" placeholder="Tell us about your project"id="" cols="20" rows="10"></textarea>
-                </div>
-                <div id="submit">
-                    <input type="submit">
-                </div>
-            </form>
+        {% csrf_token %}
+          <div id="name">
+            <input
+              type="text"
+              placeholder="First Name"
+              name="first_name"
+              required=""
+              autocomplete="none"
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="last_name"
+              required=""
+              autocomplete="none"
+            />
+          </div>
+          <div id="email">
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              required=""
+              autocomplete="none"
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              name="phone"
+              pattern="[0-9]{10}"
+              required=""
+              autocomplete="none"
+            />
+          </div>
+          <div id="details">
+            <select
+              name="service"
+              placeholder="Select the service that you want"
+              id=""
+              required=""
+            >
+              <option value="none" selected="selected">Select service</option>
+              {% for service in services %}
+
+                <option value="{{ service }}">{{ service }}</option>
+
+              {% endfor %}
+            </select>
+            <textarea
+              name="details"
+              placeholder="Tell us about your project"
+              id=""
+              cols="20"
+              rows="10"
+            ></textarea>
+          </div>
+          <div id="submit">
+            <input type="submit" />
+          </div>
+        </form>
       </div>
     </section>
 
@@ -222,23 +255,23 @@
         <div id="quicklinks">
           <h3>Quick Links</h3>
           <ul>
-            <a href="#home"><li>Home</li></a>
-            <a href="#services"><li>Services</li></a>
-            <li>Projects</li>
-            <li>Careers</li>
+              <a href="/"><li>Home</li></a>
+              <a href="#services"><li>Services</li></a>
+              <a href="/projects"><li>Projects</li></a>
+              <a href="/careers"><li>Careers</li></a>
           </ul>
         </div>
         <div id="footerservices">
           <h3>Services</h3>
           <ul>
-            <li>Design</li>
-            <li>Development</li>
-            <li>Software Solutions</li>
+            <a href="#design"><li>Design</li></a>
+            <a href="#development"><li>Development</li></a>
+            <a href="#software"><li>Software Solutions</li></a>
           </ul>
         </div>
       </div>
       <p id="copyright">
-        © 2020 Crossdash Solutions Private Limited. All rights reserved.
+        © 2020 Crossdash Solutions. All rights reserved.
       </p>
     </footer>
 
@@ -251,5 +284,7 @@
     <script>
       var scroll = new SmoothScroll('a[href*="#"]', { speed: 800 });
     </script>
+
+    <script src="/static/nav.js"></script>
   </body>
 </html>

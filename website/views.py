@@ -8,6 +8,8 @@ from .serializers import UserProjectDetailsSerializer
 
 from django.core.files.storage import FileSystemStorage
 
+from djongo.database import connect
+
 from utils.sheets_api import StorageSheets
 
 from crossdash import settings
@@ -18,7 +20,12 @@ from datetime import datetime
 import math
 class Home(View):
     def get(self, request):
-        return render(request, 'website/index.html')
+        client = connect("crossdash_website")
+        services_list_obj = client.crossdash_website.data_lists.find_one({"name": "services_list"})
+
+        services_list = services_list_obj.get("list")
+
+        return render(request, 'website/index.html', {"services": services_list})
 
     def post(self, request):
         first_name = request.POST.get('first_name')
@@ -52,31 +59,36 @@ class CareersView(View):
         return render(request, "website/careers.html")
 
     def post(self, request):
-        first_name = request.POST.get("first_name")
-        last_name = request.POST.get("last_name")
+        name = request.POST.get("name")
         email = request.POST.get("email")
         phone = request.POST.get("phone")
+        post_applied = request.POST.get("post_applied")
         project_details = request.POST.get("project_details")
         job_type = request.POST.get("job_type")
         cv = request.FILES['cv'] if 'cv' in request.FILES else None
 
         if not cv:
             print(cv)
-            return render(request, "website/careers.html", {'statuc': True, 'message': 'ThankYou for contacting'})
+            return render(request, "website/careers.html", {'status': True, 'message': 'ThankYou for contacting'})
 
         id = math.floor(datetime.now().timestamp() * 1000)
 
-        career = Careers.objects.get_or_create(
-            id = id,
-            first_name=first_name,
-            last_name = last_name,
-            email = email,
-            phone = phone,
-            project_details = project_details,
-            job_type = job_type,
-        )
+        if not Careers.objects.filter(name=name,
+                            email = email,
+                            phone = phone,
+                            post_applied= post_applied,
+                            project_details = project_details,
+                            job_type = job_type,):
+            career = Careers.objects.create(
+                name=name,
+                email = email,
+                phone = phone,
+                post_applied= post_applied,
+                project_details = project_details,
+                job_type = job_type,
+            )
 
-        if not career[1]:
+        else:
             return render(request, "website/careers.html", {'statuc': False, 'message': 'Entry Already Exists'})
 
         career = career[0]
@@ -84,14 +96,15 @@ class CareersView(View):
         file = storage.save("careers/{}/cv.{}".format(str(career.id), cv.name.split('.')[-1]), cv)
         cv_url = storage.url(file)
         career.cv_url = cv_url
+        career.id=id
         career.save()
 
         data_list = [
             career.id,
-            career.first_name,
-            career.last_name,
+            career.name,
             career.email,
             career.phone,
+            career.post_applied,
             career.project_details,
             career.job_type,
             career.cv_url,

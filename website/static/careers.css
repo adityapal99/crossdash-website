@@ -5,7 +5,7 @@
 }
 .background h1 {
   color: white;
-  font-size: 4.4em;
+  font-size: 4.4rem;
   font-weight: 600;
   width: 30%;
   position: absolute;
@@ -144,5 +144,49 @@ footer {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/**Media Queries**/
+
+@media screen and (max-width: 768px) {
+  .background h1 {
+    left: 0;
+    text-align: left;
+    top: 10rem;
+    width: 100%;
+    font-size: 3.6rem;
+    padding: 2rem 4rem;
+  }
+  .background h4 {
+    left: 0;
+    font-size: 2.2rem;
+    text-align: left;
+    width: 100%;
+    top: 12rem;
+    padding: 0 4rem;
+  }
+  .career-form-container {
+    width: 90%;
+    top: 55%;
+    margin: 22rem auto;
+  }
+  #career-form input {
+    width: 100%;
+  }
+  #career-form select {
+    width: 90%;
+  }
+  #name input {
+    width: 90%;
+  }
+  #career-form textarea {
+    width: 90%;
+  }
+  #file-upload {
+    width: 90%;
+  }
+  footer {
+    top: 8rem;
   }
 }

@@ -1,13 +1,13 @@
 #qzzo-header {
   background: url("/static/assets/png/qzzo-header.png");
-  height: 50vh;
+  min-height: 50vh;
   background-size: cover;
   width: 100%;
 }
 #qzzo-header h1 {
   margin-left: 7rem;
   position: relative;
-  top: 15%;
+  top: 5rem;
   color: white;
   font-size: 7.2rem;
   font-weight: 800;
@@ -134,4 +134,96 @@
 }
 footer {
   top: 25rem;
+}
+
+/** Media Queries**/
+
+@media screen and (max-width: 768px) {
+  #qzzo-header h1 {
+    margin-left: 4rem;
+    font-size: 7rem;
+  }
+  .header-info {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 4rem;
+  }
+  .clients-info {
+    margin-top: 2rem;
+  }
+  .header-info h4 {
+    font-size: 1.7rem;
+  }
+  .services-info {
+    margin: 6rem 0;
+    width: 80%;
+    font-size: 1.8rem;
+  }
+  .casestudy {
+    width: 100%;
+  }
+  .casestudy-bodytext {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10rem;
+  }
+  .casestudy-title h2 {
+    font-size: 2.6rem;
+    letter-spacing: 0.24rem;
+    margin-left: 4rem;
+    width: 100%;
+  }
+  .casestudy-line img {
+    margin-left: 4rem;
+  }
+  .casestudy-bodytext p {
+    width: 100%;
+    padding: 0 3rem;
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+  .casestudy-subbody h2 {
+    margin-left: 4rem;
+  }
+  #design-body {
+    margin-top: 70rem;
+  }
+  #logo {
+    margin-top: 60rem;
+  }
+  #logo img {
+    margin-top: 5rem;
+  }
+  #brochure img {
+    width: 80%;
+  }
+  #uiux-text {
+    margin-top: 10rem;
+    margin-bottom: 30rem;
+  }
+  #uiux-text p {
+    margin-top: 5rem;
+    margin-bottom: 0rem;
+  }
+  #uiux {
+    margin-top: 10rem;
+  }
+  #uiux-img {
+    flex-direction: column;
+    padding: 0 10rem;
+  }
+  #uiux-img img {
+    width: 100%;
+    margin-top: 4rem;
+  }
+  #webdev-img {
+    margin-top: 28rem;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  #webdev-img img {
+    width: 100%;
+  }
 }

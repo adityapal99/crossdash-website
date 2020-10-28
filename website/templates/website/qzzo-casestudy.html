@@ -13,26 +13,30 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="manifest" href="/static/assets/icons/manifest.webmanifest">
-    <link rel="icon" href="/static/assets/icons/favicon.ico" />
+    <link rel="icon" href="/static/assets/png/logo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     <title>Qzzo | Casestudy</title>
 </head>
 <body>
     <nav>
         <a href="/"><div class="logo">
-            <img src="/static/assets/png/logolarge.png" alt="" />
-            <h1>CROSSDASH <br />SOLUTIONS</h1>
-          </div></a>
-        <ul class="navlinks">
-            <li><a href="/#services">Services</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/careers">Careers</a></li>
-        </ul>
-        <a href="/#contact"><div class="cta">
-            <button>GET IN TOUCH</button>
+          <img src="/static/assets/png/logolarge.png" alt="" />
+          <h1>CROSSDASH <br />SOLUTIONS</h1>
         </div></a>
-    </nav>
+        <ul class="navlinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/careers">Careers</a></li>
+        </ul>
+        <div class="cta">
+          <a href="/#contact"
+          ><button>GET IN TOUCH</button></a>
+        </div>
+        <div class="menu">
+          <img src="/static/assets/svg/menu.svg" alt="">
+        </div>
+      </nav>
 
 
     <div id="qzzo-header">
@@ -66,7 +70,7 @@
         </div>
         <div class="casestudy-body"data-aos="fade-right"
         data-aos-duration="1200"
-        data-aos-offset="200">
+        data-aos-offset="200" id="design-body">
             <div class="casestudy-title">
                 <h2>Design</h2>
                 <div class="casestudy-line">
@@ -175,18 +179,18 @@
           <div id="quicklinks">
             <h3>Quick Links</h3>
             <ul>
-              <a href="index.html"><li>Home</li></a>
-              <a href="index.html#services"><li>Services</li></a>
-              <a href="projects.html"><li>Projects</li></a>
-              <a href="careers.html"><li>Careers</li></a>
+              <a href="/"><li>Home</li></a>
+              <a href="/#services"><li>Services</li></a>
+              <a href="/projects"><li>Projects</li></a>
+              <a href="/careers"><li>Careers</li></a>
             </ul>
           </div>
           <div id="footerservices">
             <h3>Services</h3>
             <ul>
-              <li>Design</li>
-              <li>Development</li>
-              <li>Software Solutions</li>
+                <a href="/#design"><li>Design</li></a>
+                <a href="/#development"><li>Development</li></a>
+                <a href="/#software"><li>Software Solutions</li></a>
             </ul>
           </div>
         </div>
@@ -199,5 +203,6 @@
     <script>
       AOS.init();
     </script>
+    <script src="/static/nav.js"></script>
 </body>
 </html>
