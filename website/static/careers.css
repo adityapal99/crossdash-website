@@ -1,83 +1,70 @@
-.background {
-  background: url(/static/assets/png/careersform.png);
+.container {
+  background: url("/static/assets/png/careers-small.jpg");
   min-height: 100vh;
   background-size: cover;
+  margin-bottom: 20vh;
+  width: 100%;
+  display: flex;
 }
-.background h1 {
+.background {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#background-text {
+  position: relative;
+  top: 15%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  margin-top: 10vh;
+  justify-content: space-around;
+}
+#background-text h1 {
   color: white;
   font-size: 4.4rem;
   font-weight: 600;
-  width: 30%;
-  position: absolute;
-  right: 20rem;
-  bottom: 34rem;
-  letter-spacing: 0.16rem;
-  opacity: 0;
-  animation: transitionleft 700ms ease forwards 1000ms;
+  letter-spacing: 0.2rem;
 }
-.background img {
-  position: absolute;
-  left: 74.5rem;
-  top: 39rem;
-  width: 8rem;
-  opacity: 0;
-  animation: transitionleft 700ms ease forwards 1000ms;
-}
-.background h4 {
+#background-text h4 {
   color: white;
-  font-size: 2.8rem;
+  letter-spacing: 0.06rem;
+  font-size: 2.6rem;
   font-weight: 500;
-  letter-spacing: 0.08rem;
-  width: 30%;
-  position: relative;
-  left: 55%;
-  top: 36rem;
-  opacity: 0;
-  animation: transitionleft 700ms ease forwards 1000ms;
 }
-#career-form {
-  text-align: center;
-}
-#career-form input {
-  display: grid;
-  width: 75%;
-  margin: 1.8rem auto;
-  grid-template-columns: 1fr;
-  background-color: #f2f2f2;
+#background-text img {
+  width: 20%;
 }
 .career-form-container {
-  position: relative;
-  bottom: 3rem;
-  padding: 2rem;
-  margin-left: 6rem;
-  background-color: white;
-  width: 40%;
-  border-radius: 0.6rem;
-  filter: drop-shadow(0.3rem 0.6rem 0.8rem rgba(37, 37, 37, 0.507));
-  opacity: 0;
-  animation: transitionIn 1000ms ease forwards 150ms;
+  text-align: center;
+  width: 60%;
 }
-#reason textarea {
+#career-form {
+  background-color: white;
   width: 75%;
-  margin: 0;
-  padding: 1.6rem 3rem;
-  outline: none;
-  border: none;
+  padding: 6rem 0;
+  display: flex;
+  position: relative;
+  right: 18%;
   border-radius: 0.6rem;
+  flex-direction: column;
+  margin: 15vh 0;
+  filter: drop-shadow(0.3rem 0.6rem 0.8rem rgba(37, 37, 37, 0.452));
+}
+#career-form input,
+#reason textarea {
   background-color: #f2f2f2;
-  height: 10rem;
 }
 #job-type select {
   background-color: #f2f2f2;
-  width: 75%;
   padding: 1.6rem 3rem;
-  outline: none;
   border: none;
+  outline: none;
+  width: 80%;
   border-radius: 0.6rem;
-  margin-top: 1.4rem;
 }
 #file-upload {
-  width: 75%;
+  width: 80%;
   background-color: #529de8;
   padding: 0.5rem 0 0 0;
   outline: none;
@@ -87,11 +74,10 @@
 }
 #file-upload p {
   color: white;
-  padding-top: 1rem;
   font-size: 1.4rem;
   position: relative;
   text-align: left;
-  margin-left: 2rem;
+  margin: 1.6rem;
 }
 #file-upload input {
   color: #529de8;
@@ -101,18 +87,7 @@
   padding: 1.4rem 3rem;
   transition-duration: 500ms;
   outline: none;
-}
-.custom-text {
-  right: 6.6rem;
-  border-radius: 0.6rem;
-  font-size: 1.4rem;
-  background-color: #529de8;
-  padding: 1.6rem 3rem;
-  width: 100%;
-  position: relative;
-  top: 5.5rem;
   cursor: pointer;
-  color: white;
 }
 ::-webkit-file-upload-button {
   display: none;
@@ -126,67 +101,52 @@
 #submit input {
   background-color: black;
   margin-top: 4rem;
-  width: 50%;
+  width: 30%;
 }
 #submit input:hover {
   background-color: #28639e;
   color: white;
 }
-footer {
-  top: 16rem;
-}
-
-@keyframes transitionright {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/**Media Queries**/
-
 @media screen and (max-width: 768px) {
-  .background h1 {
-    left: 0;
-    text-align: left;
-    top: 10rem;
-    width: 100%;
-    font-size: 3.6rem;
-    padding: 2rem 4rem;
+  .background {
+    flex-direction: column;
   }
-  .background h4 {
-    left: 0;
-    font-size: 2.2rem;
-    text-align: left;
-    width: 100%;
-    top: 12rem;
-    padding: 0 4rem;
+  #background-text {
+    top: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 14vh;
+  }
+  #background-text h1 {
+    font-size: 3.6rem;
+    letter-spacing: 0.1rem;
+  }
+  #background-text h4 {
+    font-size: 1.8rem;
+  }
+  #background-text img {
+    margin: 2rem 0;
   }
   .career-form-container {
-    width: 90%;
-    top: 55%;
-    margin: 22rem auto;
-  }
-  #career-form input {
     width: 100%;
+    margin: 5rem auto;
+    text-align: center;
   }
-  #career-form select {
-    width: 90%;
+  #career-form {
+    margin: 0;
+    right: 0;
+    width: 92%;
+    margin: 0 auto;
+    padding: 2rem;
   }
-  #name input {
-    width: 90%;
-  }
-  #career-form textarea {
-    width: 90%;
+  #job-type select {
+    width: 95%;
   }
   #file-upload {
-    width: 90%;
+    width: 95%;
   }
-  footer {
-    top: 8rem;
+  #submit input {
+    width: 60%;
   }
 }

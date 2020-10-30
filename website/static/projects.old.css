@@ -1,18 +1,17 @@
 .projects-grid {
-  margin: 14rem auto;
-  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 90%;
+  width: 100%;
   justify-content: space-evenly;
+  padding: 3rem;
 }
 .project {
-  width: 90%;
+  width: 93%;
   height: 40rem;
-  margin: 2rem auto;
   text-align: center;
   background-color: #ff9900;
   border-radius: 0.5rem;
+  margin: 0 auto;
   margin-top: 4rem;
   transition-duration: 500ms;
 }
@@ -26,7 +25,6 @@
   width: 70%;
   margin: 0 auto;
 }
-
 .project-logo img {
   width: 50%;
   position: relative;
@@ -42,7 +40,6 @@
   padding: 1.8rem 3rem;
   border: 0.16rem solid white;
   outline: none;
-  cursor: pointer;
 }
 .project-button button::before {
   content: "";
@@ -70,18 +67,16 @@
   color: #ff9900;
   cursor: pointer;
 }
+footer {
+  top: 20rem;
+}
 
+/** media queries **/
 @media screen and (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
   .project {
-    width: 100%;
-  }
-  .project-logo img {
-    width: 80%;
-  }
-  .project-button button {
-    top: 16rem;
+    height: 35rem;
   }
 }

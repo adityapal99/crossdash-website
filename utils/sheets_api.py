@@ -21,7 +21,7 @@ class StorageSheets(object):
     client = connectSheets()
 
     def __init__(self, sheet_index):
-        self.sheet = self.client.open_by_key("1N244Ii_u-68YlA5NiDwO2oKim-LUppo11pSHwuj_Aqs").get_worksheet(sheet_index)
+        self.sheet = self.client.open_by_url("https://docs.google.com/spreadsheets/d/1N244Ii_u-68YlA5NiDwO2oKim-LUppo11pSHwuj_Aqs").get_worksheet(sheet_index)
 
     def add_values(self, values_list: list):
         """Add Values to Spreadsheet

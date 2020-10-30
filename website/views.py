@@ -52,7 +52,7 @@ class Home(View):
         sheet = StorageSheets(0)
         sheet.add_values(data_list)
 
-        return render(request, 'website/index.html')
+        return redirect("/")
 
 class CareersView(View):
     def get(self, request):
@@ -90,13 +90,11 @@ class CareersView(View):
 
         else:
             return render(request, "website/careers.html", {'statuc': False, 'message': 'Entry Already Exists'})
-
-        career = career[0]
+        career.id=id
         storage = FileSystemStorage(settings.MEDIA_ROOT)
         file = storage.save("careers/{}/cv.{}".format(str(career.id), cv.name.split('.')[-1]), cv)
         cv_url = storage.url(file)
         career.cv_url = cv_url
-        career.id=id
         career.save()
 
         data_list = [

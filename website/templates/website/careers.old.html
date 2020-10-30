@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="/static/style.css" />
     <link rel="stylesheet" href="/static/careers.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel ="icon" href="/assets/png/logoicon.png">
+    <link rel ="icon" href="/static/assets/png/logo.png">
     <title>Careers | Crossdash Solutions</title>
 </head>
+<div class="wrapper">
 <body>
     <nav>
         <a href="/"><div class="logo">
@@ -20,8 +21,8 @@
         </div></a>
         <ul class="navlinks">
           <li><a href="/#services">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/careers">Careers</a></li>
         </ul>
         <div class="cta">
           <a href="/#contact"
@@ -31,15 +32,15 @@
           <img src="/static/assets/svg/menu.svg" alt="">
         </div>
       </nav>
-      <div class="container">
-            <div class="background">
-                <div id="background-text">
-                    <h1>WORK WITH US</h1>
-                    <img src="/static/white line.svg" alt="">
-                    <h4>Email your resume at <br> hr@crossdash.in</h4>
-                </div>
-                <div class="career-form-container">
-                                    <form action="/careers" class="career-form" id="career-form" method="post" enctype="multipart/form-data">
+    <div class="careerform-container">
+        <div class="background">
+            <div id="background-text">
+                <h1> WORK WITH US</h1>
+                <img src="/static/assets/svg/white line.svg" alt="">
+                <h4>Email your resume at <br> hr@crossdash.in</h4>
+            </div>
+            <div class="career-form-container">
+                <form action="/careers" class="career-form" id="career-form" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div id="name">
                         <input type="text" placeholder="Name" name="name" required="" autocomplete="none" />
@@ -65,57 +66,49 @@
                         <input type="submit">
                     </div>
                 </form>
-                </div>
             </div>
         </div>
+    </div>
 
-        <footer>
-            <div class="footer-links">
-              <div id="contactus">
+    <footer>
+        <div class="footer-links">
+            <div id="contactus">
                 <h3>Contact Us</h3>
                 <div class="contact-details">
-                  <img src="/static/assets/svg/mail.svg" alt="" />
-                  <p>crossdash@gmail.com</p>
+                    <img src="/static/assets/svg/mail.svg" alt="">
+                    <p>info@crossdashsolutions.com</p>
                 </div>
                 <div class="contact-details">
-                  <img src="/static/assets/svg/location.svg" alt="" />
-                  <p>
-                    Shop No. S-5, Malhan Plaza, Pocket-7,<br />
-                    Plot No. 5, Sector-12, Dwarka, <br />New Delhi - 110078
-                    <br />India
-                  </p>
+                    <img src="/static/assets/svg/location.svg" alt="">
+                    <p>Shop No. S-5, Malhan Plaza, Pocket-7,<br> Plot No. 5, Sector-12, Dwarka, <br>New Delhi - 110078 <br>India</p>
                 </div>
-                <div class="contact-details">
-                  <a href="tel:+91 9310117667"
-                    ><img src="/static/assets/svg/phone.svg" alt=""
-                  /></a>
-                  <a href="tel:+91 9310117667"><p>+91 9310117667</p></a>
+                 <div class="contact-details">
+                    <a href = "tel:+91 9310117667" ><img src="/static/assets/svg/phone.svg" alt=""></a>
+                    <a href = "tel:+91 9310117667" ><p>+91 9310117667</p></a>
                 </div>
-              </div>
-              <div id="quicklinks">
+            </div>
+            <div id="quicklinks">
                 <h3>Quick Links</h3>
                 <ul>
                     <a href="/"><li>Home</li></a>
                     <a href="/#services"><li>Services</li></a>
-                    <a href="projects.html"><li>Projects</li></a>
-                    <a href="careers.html"><li>Careers</li></a>
+                    <a href="/projects"><li>Projects</li></a>
+                    <a href="/careers"><li>Careers</li></a>
                 </ul>
-              </div>
-              <div id="footerservices">
+            </div>
+            <div id="footerservices">
                 <h3>Services</h3>
                 <ul>
-                  <a href="#design"><li>Design</li></a>
-                  <a href="#development"><li>Development</li></a></a>
-                  <a href="#software"><li>Software</li></a></a>
+                    <a href="/#design"><li>Design</li></a>
+                    <a href="/#development"><li>Development</li></a>
+                    <a href="/#software"><li>Software Solutions</li></a>
                 </ul>
-              </div>
             </div>
-            <p id="copyright">
-              © 2020 Crossdash Solutions. All rights reserved.
-            </p>
-          </footer>
+        </div>
+        <p id="copyright">© 2020 Crossdash Solutions. All rights reserved.</p>
+    </footer>
 
-        <script src="/static/nav.js"></script>
-    
+    <script src="/static/nav.js"></script>
 </body>
+</div>
 </html>

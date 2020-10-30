@@ -14,8 +14,7 @@
     <link rel="icon" href="/static/assets/png/logo.png" />
     <title>Crossdash Solutions</title>
   </head>
-  <body>
-    <section class="home" id="home">
+  <body>
       <nav>
         <a href="/"><div class="logo">
           <img src="/static/assets/png/logolarge.png" alt="" />
@@ -34,21 +33,22 @@
           <img src="/static/assets/svg/menu.svg" alt="">
         </div>
       </nav>
-      <div class="header">
-        <div class="headertext">
-          <h2>We provide a one stop solution to all your digital problems.</h2>
-        </div>
-        <div id="line1">
-          <img src="/static/assets/svg/violet line.svg" alt="" />
-        </div>
-        <div class="headerbutton">
-          <a href="#contact"><button>GET IN TOUCH</button></a>
+      
+      <section class="header">
+      <div class="headersection">
+        <div class="headertext-part">
+            <div class="headertext">
+              <h2>We provide a one stop solution to all your digital problems.</h2>
+            </div>
+            <div id="line1">
+              <img src="/static/assets/svg/violet line.svg" alt="" />
+            </div>
+            <div class="headerbutton">
+              <a href="#contact"><button>GET IN TOUCH</button></a>
+            </div>
         </div>
         <div class="headerimg">
           <img src="/static/assets/png/header image.png" alt="" />
-        </div>
-        <div id="polygon">
-          <img src="/static/assets/svg/blue ploygon.svg" alt="" />
         </div>
       </div>
     </section>
@@ -59,173 +59,143 @@
         <img src="/static/assets/svg/green line.svg" alt="" />
       </div>
 
-      <div id="design">
-        <div
-          class="designtext"
-          data-aos="fade-right"
-          data-aos-duration="1200"
-          data-aos-offset="300"
-        >
-          <h3>DESIGN SERVICES</h3>
-          <p>
-            Build your brand and aesthetic using our well crafted design
-            services.
-          </p>
-          <div class="seperator"></div>
-          <ul>
-            <li>UI/UX DESIGN</li>
-            <li>GRAPHICS DESIGN</li>
-            <li>CONTENT DEVELOPMENT</li>
-          </ul>
-        </div>
-        <div class="design-img">
-          <img
-            src="/static/assets/png/design.png"
-            alt=""
-            data-aos="fade-left"
-            data-aos-duration="1200"
-            data-aos-offset="300"
-          />
-        </div>
-        <div id="design-svg">
-          <img src="/static/assets/svg/blue plus.svg" alt="" />
-        </div>
-      </div>
+      <div class="service-grid">
 
-      <div id="development">
-        <div
-          class="development-text"
-          data-aos="fade-left"
-          data-aos-duration="1200"
-          data-aos-offset="300"
-        >
-          <h3>DEVELOPMENT SERVICES</h3>
-          <p>
-            Build interactive and dynamic websites and apps for your business.
-          </p>
-          <div class="seperator"></div>
-          <ul>
-            <li>WEB DEVELOPMENT</li>
-            <li>ANDROID DEVELOPMENT</li>
-            <li>iOS DEVELOPMENT</li>
-            <li>SERVER HANDLING & MAINTAINANCE</li>
-            <li>DESKTOP SOFTWARE GUI</li>
-            <li>DJANGO DEVELOPMENT</li>
-            <li>REST FRAMEWORK DEVELOPMENT</li>
-          </ul>
+        <div class = "service" id="design" class="designtext"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-offset="450">
+          <div
+            class="service-text" id = "design-text"
+          >
+            <h3>DESIGN <br> SERVICES</h3>
+            <p>
+              Build your brand and aesthetic using our well crafted design
+              services.
+            </p>
+            <div class="seperator"></div>
+            <ul>
+              <li>UI/UX DESIGN</li>
+              <li>GRAPHICS DESIGN</li>
+              <li>CONTENT DEVELOPMENT</li>
+            </ul>
+          </div>
         </div>
-        <div class="development-img">
-          <img
-            src="/static/assets/png/development.png"
-            alt=""
-            data-aos="fade-right"
-            data-aos-duration="1200"
-            data-aos-offset="300"
-          />
-        </div>
-        <div id="development-svg">
-          <img src="/static/assets/svg/red dots.svg" alt="" />
-        </div>
-      </div>
 
-      <div id="software">
-        <div
-          class="software-text"
-          data-aos="fade-right"
-          data-aos-duration="1200"
-          data-aos-offset="300"
-        >
-          <h3>AUTOMATED SOLUTIONS</h3>
-          <p>
-            Wide range of high quality software solutions to make your life
-            easier.
-          </p>
-          <div class="seperator"></div>
-          <ul>
-            <li>MACHINE & DEEP LEARNING</li>
-            <li>EMBEDDED SYSTEMS DEVELOPMENT</li>
-          </ul>
+        <div class="service" id="development" class="designtext"
+        data-aos="fade-down"
+        data-aos-duration="1200"
+        data-aos-offset="450">
+          <div
+            class="service-text" id="development-text"
+          >
+            <h3>DEVELOPMENT SERVICES</h3>
+            <p>
+              Build interactive and dynamic websites and apps for your business.
+            </p>
+            <div class="seperator"></div>
+            <ul>
+              <li>WEB DEVELOPMENT</li>
+              <li>ANDROID DEVELOPMENT</li>
+              <li>iOS DEVELOPMENT</li>
+              <li>SERVER HANDLING & MAINTAINANCE</li>
+              <li>DESKTOP SOFTWARE GUI</li>
+              <li>DJANGO DEVELOPMENT</li>
+              <li>REST FRAMEWORK DEVELOPMENT</li>
+            </ul>
+          </div>
         </div>
-        <div class="software-img">
-          <img
-            src="/static/assets/png/software.png"
-            alt=""
-            data-aos="fade-left"
-            data-aos-duration="1200"
-            data-aos-offset="300"
-          />
-        </div>
-        <div id="software-svg">
-          <img src="/static/assets/svg/green plus.svg" alt="" />
+
+        <div class="service" id="software" class="designtext"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-offset="450">
+          <div
+            class="service-text" id="software-text"
+          >
+            <h3>AUTOMATED SOLUTIONS</h3>
+            <p>
+              Wide range of high quality software solutions to make your life
+              easier.
+            </p>
+            <div class="seperator"></div>
+            <ul>
+              <li>MACHINE & DEEP LEARNING</li>
+              <li>EMBEDDED SYSTEMS DEVELOPMENT</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="designtext"
+    data-aos="fade-right"
+    data-aos-duration="1200"
+    data-aos-offset="300">
       <div class="form-container">
         <h3>LET'S COLLABORATE!</h3>
         <h4>Connect with us.</h4>
         <form action="/" method="post">
-        {% csrf_token %}
-          <div id="name">
-            <input
-              type="text"
-              placeholder="First Name"
-              name="first_name"
-              required=""
-              autocomplete="none"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              name="last_name"
-              required=""
-              autocomplete="none"
-            />
-          </div>
-          <div id="email">
-            <input
-              type="email"
-              placeholder="Email"
-              name="email"
-              required=""
-              autocomplete="none"
-            />
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              name="phone"
-              pattern="[0-9]{10}"
-              required=""
-              autocomplete="none"
-            />
-          </div>
-          <div id="details">
-            <select
-              name="service"
-              placeholder="Select the service that you want"
-              id=""
-              required=""
-            >
-              <option value="none" selected="selected">Select service</option>
-              {% for service in services %}
-
-                <option value="{{ service }}">{{ service }}</option>
-
-              {% endfor %}
-            </select>
-            <textarea
-              name="details"
-              placeholder="Tell us about your project"
-              id=""
-              cols="20"
-              rows="10"
-            ></textarea>
-          </div>
-          <div id="submit">
-            <input type="submit" />
-          </div>
-        </form>
+          {% csrf_token %}
+            <div id="name">
+              <input
+                type="text"
+                placeholder="First Name"
+                name="first_name"
+                required=""
+                autocomplete="none"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                name="last_name"
+                required=""
+                autocomplete="none"
+              />
+            </div>
+            <div id="email">
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                required=""
+                autocomplete="none"
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                name="phone"
+                pattern="[0-9]{10}"
+                required=""
+                autocomplete="none"
+              />
+            </div>
+            <div id="details">
+              <select
+                name="service"
+                placeholder="Select the service that you want"
+                id=""
+                required=""
+              >
+                <option value="none" selected="selected">Select service</option>
+                {% for service in services %}
+  
+                  <option value="{{ service }}">{{ service }}</option>
+  
+                {% endfor %}
+              </select>
+              <textarea
+                name="details"
+                placeholder="Tell us about your project"
+                id=""
+                cols="20"
+                rows="10"
+              ></textarea>
+            </div>
+            <div id="submit">
+              <input type="submit" />
+            </div>
+          </form>
       </div>
     </section>
 
@@ -235,7 +205,7 @@
           <h3>Contact Us</h3>
           <div class="contact-details">
             <img src="/static/assets/svg/mail.svg" alt="" />
-            <p>info@crossdashsolutions.com</p>
+            <p>crossdash@gmail.com</p>
           </div>
           <div class="contact-details">
             <img src="/static/assets/svg/location.svg" alt="" />
@@ -256,7 +226,7 @@
           <h3>Quick Links</h3>
           <ul>
               <a href="/"><li>Home</li></a>
-              <a href="#services"><li>Services</li></a>
+              <a href="/#services"><li>Services</li></a>
               <a href="/projects"><li>Projects</li></a>
               <a href="/careers"><li>Careers</li></a>
           </ul>
@@ -265,8 +235,8 @@
           <h3>Services</h3>
           <ul>
             <a href="#design"><li>Design</li></a>
-            <a href="#development"><li>Development</li></a>
-            <a href="#software"><li>Software Solutions</li></a>
+            <a href="#development"><li>Development</li></a></a>
+            <a href="#software"><li>Software</li></a></a>
           </ul>
         </div>
       </div>
