@@ -4,11 +4,6 @@
   box-sizing: border-box;
   font-family: "poppins", "sans serif";
 }
-
-a {
-  text-decoration: none;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -94,6 +89,9 @@ nav a {
   align-items: center;
   width: 100%;
 }
+.headertext-part {
+  margin-left: 2%;
+}
 .headersection {
   margin-left: 6.8rem;
   display: flex;
@@ -101,7 +99,7 @@ nav a {
 }
 .headertext h2 {
   color: white;
-  font-size: 3.2rem;
+  font-size: 3rem;
   letter-spacing: 0.1rem;
   font-weight: 600;
   width: 80%;
@@ -170,51 +168,51 @@ nav a {
   display: flex;
   flex-direction: column;
   margin-left: 6.4rem;
-  width: 95%;
+  width: 100%;
 }
 .services h2 {
+  margin: 0 1%;
   font-weight: 600;
   font-size: 3.4rem;
   color: #02216b;
 }
 #line2 {
   width: 5%;
-  margin: 1rem 0;
+  margin: 1rem 1%;
 }
 .service-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 .service {
   display: flex;
-  margin: 4rem 0;
-  width: 95%;
+  margin: 4% 1%;
+  width: 90%;
 }
 .service-text {
   z-index: 5;
-  text-align: center;
   text-align: left;
   color: white;
-  width: 100%;
-  padding: 8rem 4rem;
-  margin-top: 4rem;
-  min-height: 38rem;
+  width: 90%;
+  padding: 14rem 4rem;
   display: flex;
   flex-direction: column;
   filter: drop-shadow(0rem -0.2rem 0.5rem rgba(78, 78, 78, 0.507));
 }
 .service-img {
-  background-color: #02216b;
+  width: 100%;
+  position: relative;
 }
 .service-img img {
-  margin-top: -30rem;
-  margin-left: -10rem;
-  width: 130rem;
-  position: absolute;
+  margin-top: 1rem;
+  margin-left: -4rem;
+  min-height: 50rem;
+  width: 100%;
+  position: relative;
 }
 .service-text h3 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.45rem;
 }
@@ -249,9 +247,6 @@ nav a {
 }
 #software-text {
   background-color: #3abe81;
-}
-.service-img {
-  transform: scale(0.4);
 }
 #contact {
   margin: 15rem 0;
@@ -381,6 +376,9 @@ ul li {
   font-weight: 500;
   font-size: 1.5rem;
 }
+#footerservices a {
+  text-decoration: none;
+}
 
 /**responsive**/
 @media screen and (max-width: 768px) {
@@ -406,6 +404,7 @@ ul li {
   }
   #line2 {
     width: 20%;
+    margin-bottom: 6rem;
   }
   .service-grid {
     width: 100%;
@@ -416,7 +415,8 @@ ul li {
     padding: 6% 8%;
   }
   .service {
-    margin: 1rem 0;
+    margin: 2rem auto;
+    width: 100%;
   }
   .service-img {
     display: none;
@@ -425,11 +425,12 @@ ul li {
     display: none;
   }
   .services {
-    margin-left: 2rem;
+    margin: 8rem auto;
     width: 92%;
   }
   .service-text {
     width: 100%;
+    padding: 8rem 4rem;
   }
   .service-text h3 {
     text-align: left;
