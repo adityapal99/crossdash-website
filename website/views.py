@@ -18,6 +18,7 @@ from bson.objectid import ObjectId
 
 from datetime import datetime
 import math
+
 class Home(View):
     def get(self, request):
         client = connect("crossdash_website")
@@ -26,7 +27,6 @@ class Home(View):
         services_list = services_list_obj.get("list")
 
         return render(request, 'website/index.html', {"services": services_list})
-
     def post(self, request):
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
